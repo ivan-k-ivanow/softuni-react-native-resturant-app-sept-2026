@@ -32,7 +32,7 @@ export default function HomeScreen() {
                 <View style={styles.section}>
                     <Text style={styles.sectionTitle}>Categories</Text>
                     {categories.map((category) => (
-                        <Link screen="Category" params={{ categoryId: category.id }} >
+                        <Link screen="Category" params={{ categoryId: category.id, categoryTitle: category.title }} style={{ marginBottom: 8 }} >
                             <CategoryCard key={category.id} title={category.title} />
                         </Link>
                     ))}
