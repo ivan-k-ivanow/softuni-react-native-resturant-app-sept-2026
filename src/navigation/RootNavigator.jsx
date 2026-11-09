@@ -1,45 +1,14 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeNavigator from './HomeNavigator';
-import CartNavigator from './CartNavigator';
-import InfoScreen from '../screens/InfoScreen';
-import { Ionicons } from "@expo/vector-icons";
-
-// Rename the default export to match the function name
+import { createStackNavigator } from '@react-navigation/stack';
+import DetailsScreen from '../screens/DetailsScreen';
+import TabNavigator from './TabNavigator';
 
 export default function RootNavigator() {
 
-    const Tabs = createBottomTabNavigator();
-    // const Tabs = createNativeBottomTabNavigator();
-
+    const stack = createStackNavigator();
     return (
-        <>
-            <Tabs.Navigator>
-                <Tabs.Screen
-                    name="HomeTab"
-                    component={HomeNavigator}
-                    options={{ 
-                        headerShown: false,
-                        tabBarIcon: ({ color, size }) => <Ionicons name="restaurant" color={color} size={size} />
-                    }}
-                />
-
-                <Tabs.Screen
-                    name="CartTab"
-                    component={CartNavigator}
-                    options={{ 
-                        headerShown: false,
-                        tabBarIcon: ({ color, size }) => <Ionicons name="cart" color={color} size={size} />
-                    }}
-                />
-
-                <Tabs.Screen
-                    name="Info"
-                    component={InfoScreen}
-                    options={{ 
-                        tabBarIcon: ({ color, size }) => <Ionicons name="information-circle" color={color} size={size} />
-                    }}
-                />
-            </Tabs.Navigator>
-        </>
+        <stack.Navigator>
+            <stack.Screen name="MainStack" component={TabNavigator} options={{ headerShown: false }} />
+             <stack.Screen name="Details" component={DetailsScreen} options={{ title: "Details" }} />
+        </stack.Navigator>
     );
 }
