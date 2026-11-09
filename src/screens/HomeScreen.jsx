@@ -24,7 +24,11 @@ export default function HomeScreen() {
                     <FlatList
                         data={featuredItems}
                         keyExtractor={(item) => item.id}
-                        renderItem={({ item }) => <FeaturedCard {...item} />}
+                        renderItem={({ item }) => (
+                        <Link screen="Details" params={{ item }} style={{ marginRight: 12 }}>
+                            <FeaturedCard {...item} />
+                        </Link>
+                        )}
                         horizontal
                         contentContainerStyle={styles.featuredList}
                         />
