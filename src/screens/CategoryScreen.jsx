@@ -7,7 +7,7 @@ export default function CategoryScreen({
     navigation,
 }) {
     navigation.setOptions({
-        title: route.params?.categoryTitle || 'Category',
+        title: route.params?.categoryTitle
     });
     const categoryId = route.params?.categoryId || 'cat-1'; // Example category ID, replace with actual logic if needed
     const categoryItems = getCategoryItems(categoryId);
