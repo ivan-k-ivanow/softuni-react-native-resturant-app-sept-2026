@@ -1,5 +1,4 @@
 export const menuItems = [
-  // Burgers (cat-1)
   {
     id: 'item-1',
     categoryId: 'cat-1',
@@ -32,8 +31,6 @@ export const menuItems = [
     price: 13.99,
     imageUrl: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400',
   },
-
-  // Pizza (cat-2)
   {
     id: 'item-5',
     categoryId: 'cat-2',
@@ -66,8 +63,6 @@ export const menuItems = [
     price: 12.99,
     imageUrl: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400',
   },
-
-  // Salads (cat-3)
   {
     id: 'item-9',
     categoryId: 'cat-3',
@@ -92,8 +87,6 @@ export const menuItems = [
     price: 6.99,
     imageUrl: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400',
   },
-
-  // Drinks (cat-4)
   {
     id: 'item-12',
     categoryId: 'cat-4',
@@ -126,8 +119,6 @@ export const menuItems = [
     price: 2.49,
     imageUrl: 'https://images.unsplash.com/photo-1581636625402-29b2a704ef13?w=400',
   },
-
-  // Desserts (cat-5)
   {
     id: 'item-16',
     categoryId: 'cat-5',
@@ -152,8 +143,6 @@ export const menuItems = [
     price: 5.99,
     imageUrl: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400',
   },
-
-  // Sides (cat-6)
   {
     id: 'item-19',
     categoryId: 'cat-6',
@@ -202,3 +191,5 @@ export const featuredItems = menuItems.filter((item) =>
 );
 
 export const getCategoryItems = (categoryId) => menuItems.filter((item) => item.categoryId === categoryId);
+
+
